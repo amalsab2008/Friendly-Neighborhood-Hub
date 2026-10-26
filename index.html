@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Friendly Neighborhood Hub — Discover Campus Life & Events</title>
+  <meta name="description" content="Discover upcoming college workshops, hackathons, cultural festivals, technical events, sports, and seminars. Your one-stop campus event discovery platform.">
+  
+  <!-- Google Fonts: Inter & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome Icons (CDN with local SVG fallbacks) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header / Navigation Bar -->
+  <header class="site-header" id="header">
+    <div class="container header-container">
+      <a href="#home" class="logo-link" aria-label="Friendly Neighborhood Hub Home">
+        <span class="logo-icon">
+          <i class="fa-solid fa-graduation-cap"></i>
+        </span>
+        <div class="logo-text">
+          <span class="logo-title">Neighborhood<span class="logo-accent">Hub</span></span>
+          <span class="logo-tagline">Campus Events</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="desktop-nav" aria-label="Primary Navigation">
+        <ul class="nav-list">
+          <li><a href="#home" class="nav-link active">Home</a></li>
+          <li><a href="#events" class="nav-link">Explore Events</a></li>
+          <li><a href="#categories" class="nav-link">Categories</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+        </ul>
+      </nav>
+
+      <!-- Header Action & Mobile Menu Toggle -->
+      <div class="header-actions">
+        <a href="#events" class="btn btn-primary btn-sm header-cta">
+          <i class="fa-solid fa-compass"></i>
+          <span>Explore Events</span>
+        </a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobileNav">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <nav class="mobile-nav" id="mobileNav" aria-label="Mobile Navigation" aria-hidden="true">
+      <div class="mobile-nav-inner container">
+        <ul class="mobile-nav-list">
+          <li><a href="#home" class="mobile-nav-link active">Home</a></li>
+          <li><a href="#events" class="mobile-nav-link">Explore Events</a></li>
+          <li><a href="#categories" class="mobile-nav-link">Categories</a></li>
+          <li><a href="#about" class="mobile-nav-link">About</a></li>
+        </ul>
+        <div class="mobile-nav-footer">
+          <a href="#events" class="btn btn-primary btn-block mobile-cta">
+            <i class="fa-solid fa-compass"></i>
+            <span>Explore Events</span>
+          </a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero-section" id="home">
+      <div class="hero-bg-shapes" aria-hidden="true">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+      </div>
+      
+      <div class="container hero-container">
+        <div class="hero-content">
+          <div class="hero-badge">
+            <span class="badge-dot"></span>
+            <span class="badge-text">Fall & Winter Semester 2026</span>
+          </div>
+
+          <h1 class="hero-title">
+            Discover What's <br>
+            <span class="highlight-text">Happening on Campus</span>
+          </h1>
+
+          <p class="hero-description">
+            Your central quad for hackathons, cultural festivals, tech workshops, sports tournaments, and inspiring seminars. Connect with peers, level up your skills, and make every semester count.
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="#events" class="btn btn-primary btn-lg">
+              <i class="fa-solid fa-calendar-check"></i>
+              <span>Explore All Events</span>
+            </a>
+            <a href="#categories" class="btn btn-outline btn-lg">
+              <i class="fa-solid fa-layer-group"></i>
+              <span>Browse Categories</span>
+            </a>
+          </div>
+
+          <!-- Quick Stats Banner -->
+          <div class="hero-stats">
+            <div class="stat-card">
+              <span class="stat-number">50+</span>
+              <span class="stat-label">Active Events</span>
+            </div>
+            <div class="stat-divider" aria-hidden="true"></div>
+            <div class="stat-card">
+              <span class="stat-number">4.8k</span>
+              <span class="stat-label">Students Joined</span>
+            </div>
+            <div class="stat-divider" aria-hidden="true"></div>
+            <div class="stat-card">
+              <span class="stat-number">100%</span>
+              <span class="stat-label">Free Registration</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Visual Interactive Card Deck -->
+        <div class="hero-visual" aria-hidden="true">
+          <div class="floating-card card-primary">
+            <div class="card-pill">Trending Now 🔥</div>
+            <div class="card-icon-wrap">
+              <i class="fa-solid fa-code"></i>
+            </div>
+            <div class="card-info">
+              <h4>HackNova 2026</h4>
+              <p>36-Hour Hackathon • 400+ Coders</p>
+            </div>
+          </div>
+
+          <div class="floating-card card-secondary">
+            <div class="card-pill pill-cultural">Live Music 🎸</div>
+            <div class="card-icon-wrap icon-purple">
+              <i class="fa-solid fa-masks-theater"></i>
+            </div>
+            <div class="card-info">
+              <h4>Rhythm & Beats '26</h4>
+              <p>Annual Cultural Fest • Amphitheatre</p>
+            </div>
+          </div>
+
+          <div class="floating-card card-tertiary">
+            <div class="card-pill pill-sports">Tournament ⚽</div>
+            <div class="card-icon-wrap icon-green">
+              <i class="fa-solid fa-futbol"></i>
+            </div>
+            <div class="card-info">
+              <h4>Premier League Cup</h4>
+              <p>Campus Turf • 16 Teams</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories-section" id="categories">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-eyebrow">Pillars of Campus Life</span>
+          <h2 class="section-title">Explore by Category</h2>
+          <p class="section-subtitle">
+            Find the exact experiences that match your passions, hobbies, and career goals.
+          </p>
+        </div>
+
+        <div class="categories-grid">
+          <!-- Hackathons -->
+          <button class="category-card" data-category="Hackathon" type="button">
+            <div class="category-icon-box bg-indigo">
+              <i class="fa-solid fa-laptop-code"></i>
+            </div>
+            <h3 class="category-name">Hackathons</h3>
+            <p class="category-desc">Sprints, pitch competitions, and overnight code marathons.</p>
+            <span class="category-count">1 Event Active</span>
+          </button>
+
+          <!-- Technical -->
+          <button class="category-card" data-category="Technical" type="button">
+            <div class="category-icon-box bg-blue">
+              <i class="fa-solid fa-robot"></i>
+            </div>
+            <h3 class="category-name">Technical</h3>
+            <p class="category-desc">Robotics battles, web dev, cloud, and open source summits.</p>
+            <span class="category-count">1 Event Active</span>
+          </button>
+
+          <!-- Workshops -->
+          <button class="category-card" data-category="Workshop" type="button">
+            <div class="category-icon-box bg-amber">
+              <i class="fa-solid fa-chalkboard-user"></i>
+            </div>
+            <h3 class="category-name">Workshops</h3>
+            <p class="category-desc">Hands-on interactive masterclasses and design bootcamps.</p>
+            <span class="category-count">2 Events Active</span>
+          </button>
+
+          <!-- Cultural -->
+          <button class="category-card" data-category="Cultural" type="button">
+            <div class="category-icon-box bg-purple">
+              <i class="fa-solid fa-masks-theater"></i>
+            </div>
+            <h3 class="category-name">Cultural Festivals</h3>
+            <p class="category-desc">Music concerts, theatrical acts, dance nights, and poetry slams.</p>
+            <span class="category-count">2 Events Active</span>
+          </button>
+
+          <!-- Sports -->
+          <button class="category-card" data-category="Sports" type="button">
+            <div class="category-icon-box bg-emerald">
+              <i class="fa-solid fa-trophy"></i>
+            </div>
+            <h3 class="category-name">Sports & E-Sports</h3>
+            <p class="category-desc">Intramural leagues, athletic cups, and competitive gaming.</p>
+            <span class="category-count">1 Event Active</span>
+          </button>
+
+          <!-- Seminars -->
+          <button class="category-card" data-category="Seminar" type="button">
+            <div class="category-icon-box bg-rose">
+              <i class="fa-solid fa-lightbulb"></i>
+            </div>
+            <h3 class="category-name">Seminars & Talks</h3>
+            <p class="category-desc">Keynotes by industry visionaries and academic leaders.</p>
+            <span class="category-count">1 Event Active</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Events Section (Search, Filters & Cards) -->
+    <section class="events-section" id="events">
+      <div class="container">
+        <div class="section-header">
+          <div class="header-text-group">
+            <span class="section-eyebrow">Upcoming Schedule</span>
+            <h2 class="section-title">Campus Events</h2>
+            <p class="section-subtitle">
+              Browse through our curated list of events. Filter by topic or search directly.
+            </p>
+          </div>
+          <div class="results-badge" id="resultsCount">
+            Showing <strong id="visibleCount">8</strong> events
+          </div>
+        </div>
+
+        <!-- Search and Filter Controls -->
+        <div class="filter-controls-container">
+          <!-- Search Bar -->
+          <div class="search-bar-wrapper">
+            <i class="fa-solid fa-magnifying-glass search-icon" aria-hidden="true"></i>
+            <input 
+              type="text" 
+              id="eventSearchInput" 
+              class="search-input" 
+              placeholder="Search by title, speaker, keyword, or venue..." 
+              aria-label="Search events"
+              autocomplete="off"
+            >
+            <button type="button" id="clearSearchBtn" class="clear-search-btn" aria-label="Clear search query" style="display: none;">
+              <i class="fa-solid fa-xmark"></i>
+            </button>
+          </div>
+
+          <!-- Category Filter Pills -->
+          <div class="filter-pills-wrapper" role="region" aria-label="Category filters">
+            <div class="filter-pills-scroll" id="categoryFilters">
+              <button type="button" class="filter-pill active" data-category="all">
+                <i class="fa-solid fa-border-all"></i>
+                <span>All Events</span>
+              </button>
+              <button type="button" class="filter-pill" data-category="Hackathon">
+                <i class="fa-solid fa-laptop-code"></i>
+                <span>Hackathons</span>
+              </button>
+              <button type="button" class="filter-pill" data-category="Technical">
+                <i class="fa-solid fa-robot"></i>
+                <span>Technical</span>
+              </button>
+              <button type="button" class="filter-pill" data-category="Workshop">
+                <i class="fa-solid fa-chalkboard-user"></i>
+                <span>Workshops</span>
+              </button>
+              <button type="button" class="filter-pill" data-category="Cultural">
+                <i class="fa-solid fa-masks-theater"></i>
+                <span>Cultural</span>
+              </button>
+              <button type="button" class="filter-pill" data-category="Sports">
+                <i class="fa-solid fa-futbol"></i>
+                <span>Sports</span>
+              </button>
+              <button type="button" class="filter-pill" data-category="Seminar">
+                <i class="fa-solid fa-lightbulb"></i>
+                <span>Seminars</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Sort and Active Filters Row -->
+          <div class="filter-meta-bar">
+            <div class="active-filter-tags" id="activeFilterTags">
+              <!-- Dynamically populated tags e.g. "Category: Hackathons [x]" -->
+            </div>
+            <div class="sort-wrapper">
+              <label for="eventSortSelect" class="sort-label">Sort by:</label>
+              <div class="select-wrapper">
+                <select id="eventSortSelect" class="sort-select" aria-label="Sort events">
+                  <option value="date-asc">Upcoming Date (Earliest)</option>
+                  <option value="date-desc">Later Date</option>
+                  <option value="name-asc">Title (A to Z)</option>
+                  <option value="seats-asc">Seats Available (Low to High)</option>
+                </select>
+                <i class="fa-solid fa-chevron-down select-arrow" aria-hidden="true"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Events Grid (Rendered Dynamically via JS) -->
+        <div class="events-grid" id="eventsGrid" role="feed" aria-busy="false" aria-live="polite">
+          <!-- Dynamic event cards will be injected here by script.js -->
+        </div>
+
+        <!-- Empty State (Hidden when items exist) -->
+        <div class="empty-state" id="emptyState" style="display: none;">
+          <div class="empty-icon-wrapper">
+            <i class="fa-solid fa-calendar-xmark"></i>
+          </div>
+          <h3 class="empty-title">No events found</h3>
+          <p class="empty-desc">
+            We couldn't find any events matching your search or selected filter. Try clearing filters or searching with different terms.
+          </p>
+          <button type="button" id="resetFiltersBtn" class="btn btn-outline btn-sm">
+            <i class="fa-solid fa-rotate-left"></i>
+            <span>Reset All Filters</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section" id="about">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-content">
+            <span class="section-eyebrow">About the Platform</span>
+            <h2 class="section-title">Built by Students, <br>For the Student Community</h2>
+            <p class="about-lead">
+              Friendly Neighborhood Hub is the central heartbeat of our university campus. We believe student life is defined by the connections made, skills discovered, and memories forged outside the classroom walls.
+            </p>
+            <p class="about-body">
+              Never miss a flyer taped to a classroom door or an buried email blast again. From late-night hackathons and competitive sports leagues to cultural festivals and AI talks, everything happening on campus is curated right here with instant RSVP.
+            </p>
+
+            <div class="about-features-list">
+              <div class="feature-item">
+                <div class="feature-icon">
+                  <i class="fa-solid fa-bolt"></i>
+                </div>
+                <div class="feature-text">
+                  <h4>Instant RSVP</h4>
+                  <p>Register in seconds with zero hassle and get an instant digital entrance pass.</p>
+                </div>
+              </div>
+
+              <div class="feature-item">
+                <div class="feature-icon">
+                  <i class="fa-solid fa-shield-check"></i>
+                </div>
+                <div class="feature-text">
+                  <h4>Verified Student Clubs</h4>
+                  <p>Every event is officially organized and verified by recognized student organizations.</p>
+                </div>
+              </div>
+
+              <div class="feature-item">
+                <div class="feature-icon">
+                  <i class="fa-solid fa-bell"></i>
+                </div>
+                <div class="feature-text">
+                  <h4>Real-Time Schedule</h4>
+                  <p>Never get stranded by venue changes or date shifts with real-time timetable updates.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-cards-column">
+            <div class="campus-showcase-box">
+              <div class="showcase-header">
+                <div class="showcase-badge">Campus Spotlight</div>
+                <div class="showcase-dot-pulse"></div>
+              </div>
+              <h3 class="showcase-title">Why Get Involved?</h3>
+              <ul class="showcase-checklist">
+                <li>
+                  <i class="fa-solid fa-circle-check"></i>
+                  <span><strong>Build your resume:</strong> Win hackathons, earn workshop certifications, and lead student clubs.</span>
+                </li>
+                <li>
+                  <i class="fa-solid fa-circle-check"></i>
+                  <span><strong>Expand your network:</strong> Connect with fellow engineers, designers, artists, and athletes.</span>
+                </li>
+                <li>
+                  <i class="fa-solid fa-circle-check"></i>
+                  <span><strong>Learn beyond curriculum:</strong> Gain hands-on exposure to cutting-edge tech and real projects.</span>
+                </li>
+                <li>
+                  <i class="fa-solid fa-circle-check"></i>
+                  <span><strong>Have fun:</strong> Celebrate music fests, sports leagues, and create lifelong college memories.</span>
+                </li>
+              </ul>
+              <div class="showcase-footer">
+                <div class="student-avatars">
+                  <span class="avatar-circle">👩‍💻</span>
+                  <span class="avatar-circle">🎨</span>
+                  <span class="avatar-circle">⚽</span>
+                  <span class="avatar-circle">🎸</span>
+                  <span class="avatar-more">+4.8k</span>
+                </div>
+                <span class="avatars-label">Join fellow students this semester</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Host / Submit Event Banner -->
+    <section class="banner-section">
+      <div class="container">
+        <div class="cta-banner">
+          <div class="cta-content">
+            <h3 class="cta-title">Are you organizing a campus event?</h3>
+            <p class="cta-subtitle">
+              Student council members, club presidents, and departmental leads can submit upcoming events to reach the entire campus.
+            </p>
+          </div>
+          <button type="button" class="btn btn-secondary btn-lg" id="hostEventBtn">
+            <i class="fa-solid fa-plus-circle"></i>
+            <span>Submit an Event</span>
+          </button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <div class="footer-brand-col">
+        <a href="#home" class="logo-link">
+          <span class="logo-icon">
+            <i class="fa-solid fa-graduation-cap"></i>
+          </span>
+          <div class="logo-text">
+            <span class="logo-title">Neighborhood<span class="logo-accent">Hub</span></span>
+            <span class="logo-tagline">Campus Events</span>
+          </div>
+        </a>
+        <p class="footer-desc">
+          The friendly, student-driven discovery portal for college events, technical workshops, sports tourneys, and cultural festivities.
+        </p>
+        <div class="footer-socials">
+          <a href="#" aria-label="Campus Discord" class="social-icon"><i class="fa-brands fa-discord"></i></a>
+          <a href="#" aria-label="Campus Instagram" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="GitHub Repository" class="social-icon"><i class="fa-brands fa-github"></i></a>
+          <a href="#" aria-label="LinkedIn Community" class="social-icon"><i class="fa-brands fa-linkedin-in"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-links-col">
+        <h4 class="footer-heading">Quick Navigation</h4>
+        <ul class="footer-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#events">Explore All Events</a></li>
+          <li><a href="#categories">Categories</a></li>
+          <li><a href="#about">About Platform</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links-col">
+        <h4 class="footer-heading">Event Categories</h4>
+        <ul class="footer-links">
+          <li><a href="#events" data-category="Hackathon" class="footer-category-link">Hackathons</a></li>
+          <li><a href="#events" data-category="Technical" class="footer-category-link">Technical Competitions</a></li>
+          <li><a href="#events" data-category="Workshop" class="footer-category-link">Hands-On Workshops</a></li>
+          <li><a href="#events" data-category="Cultural" class="footer-category-link">Cultural Festivals</a></li>
+          <li><a href="#events" data-category="Sports" class="footer-category-link">Sports & Athletics</a></li>
+          <li><a href="#events" data-category="Seminar" class="footer-category-link">Seminars & Keynotes</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-newsletter-col">
+        <h4 class="footer-heading">Stay in the Loop</h4>
+        <p class="newsletter-desc">Get the weekly campus digest with upcoming weekend events directly in your student inbox.</p>
+        <form class="newsletter-form" id="newsletterForm" novalidate>
+          <div class="newsletter-input-group">
+            <input 
+              type="email" 
+              id="newsletterEmail" 
+              placeholder="Enter student email..." 
+              required 
+              aria-label="Student email address"
+            >
+            <button type="submit" class="btn btn-primary" aria-label="Subscribe to weekly digest">
+              <i class="fa-solid fa-paper-plane"></i>
+            </button>
+          </div>
+          <span class="newsletter-status" id="newsletterStatus" role="status" aria-live="polite"></span>
+        </form>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <p class="copyright-text">
+          &copy; 2026 Friendly Neighborhood Hub. Built with care for campus students. All rights reserved.
+        </p>
+        <div class="footer-legal">
+          <a href="#" class="legal-link">Privacy Policy</a>
+          <span class="legal-dot">•</span>
+          <a href="#" class="legal-link">Terms of Service</a>
+          <span class="legal-dot">•</span>
+          <a href="#" class="legal-link">Code of Conduct</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Registration Modal Dialog -->
+  <div class="modal-backdrop" id="registrationModalBackdrop" aria-hidden="true">
+    <div class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="modalEventTitle">
+      <button type="button" class="modal-close-btn" id="closeModalBtn" aria-label="Close modal window">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <!-- Modal Step 1: Registration Form -->
+      <div class="modal-step" id="modalStepForm">
+        <div class="modal-header">
+          <span class="modal-category-tag" id="modalEventCategory">Hackathon</span>
+          <h3 class="modal-title" id="modalEventTitle">Event Title</h3>
+          <div class="modal-event-meta">
+            <span class="modal-meta-item">
+              <i class="fa-regular fa-calendar"></i>
+              <span id="modalEventDate">Nov 14, 2026</span>
+            </span>
+            <span class="modal-meta-item">
+              <i class="fa-solid fa-location-dot"></i>
+              <span id="modalEventVenue">Campus Arena</span>
+            </span>
+          </div>
+        </div>
+
+        <form id="registrationForm" class="registration-form" novalidate>
+          <input type="hidden" id="registerEventId" name="eventId">
+
+          <div class="form-group">
+            <label for="studentName" class="form-label">Full Name <span class="required-star">*</span></label>
+            <input 
+              type="text" 
+              id="studentName" 
+              name="studentName" 
+              class="form-input" 
+              placeholder="e.g. Alex Chen" 
+              required
+            >
+            <span class="form-error" id="nameError">Please enter your full name.</span>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="studentEmail" class="form-label">College Email <span class="required-star">*</span></label>
+              <input 
+                type="email" 
+                id="studentEmail" 
+                name="studentEmail" 
+                class="form-input" 
+                placeholder="alex@college.edu" 
+                required
+              >
+              <span class="form-error" id="emailError">Please enter a valid student email.</span>
+            </div>
+
+            <div class="form-group">
+              <label for="studentId" class="form-label">Student ID / Roll No <span class="required-star">*</span></label>
+              <input 
+                type="text" 
+                id="studentId" 
+                name="studentId" 
+                class="form-input" 
+                placeholder="e.g. CS-2023-042" 
+                required
+              >
+              <span class="form-error" id="idError">Please enter your student ID.</span>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="studentYear" class="form-label">Academic Year <span class="required-star">*</span></label>
+              <select id="studentYear" name="studentYear" class="form-select" required>
+                <option value="" disabled selected>Select your year</option>
+                <option value="1st Year">1st Year (Freshman)</option>
+                <option value="2nd Year">2nd Year (Sophomore)</option>
+                <option value="3rd Year">3rd Year (Junior)</option>
+                <option value="4th Year">4th Year (Senior)</option>
+                <option value="Postgraduate">Postgraduate / Masters</option>
+              </select>
+              <span class="form-error" id="yearError">Please select your academic year.</span>
+            </div>
+
+            <div class="form-group">
+              <label for="studentDept" class="form-label">Department / Branch <span class="required-star">*</span></label>
+              <input 
+                type="text" 
+                id="studentDept" 
+                name="studentDept" 
+                class="form-input" 
+                placeholder="e.g. Computer Science" 
+                required
+              >
+              <span class="form-error" id="deptError">Please enter your department.</span>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="studentDiet" class="form-label">Special Notes / Dietary Requirements (Optional)</label>
+            <input 
+              type="text" 
+              id="studentDiet" 
+              name="studentDiet" 
+              class="form-input" 
+              placeholder="e.g. Vegetarian meal, team member names, wheelchair access"
+            >
+          </div>
+
+          <div class="form-agreement">
+            <label class="checkbox-container">
+              <input type="checkbox" id="termsCheck" required>
+              <span class="checkbox-checkmark"></span>
+              <span class="checkbox-text">I understand this is a fictional college registration demo and seats are allocated on a first-come basis.</span>
+            </label>
+            <span class="form-error" id="termsError">Please accept the agreement to continue.</span>
+          </div>
+
+          <div class="modal-actions">
+            <button type="button" class="btn btn-outline" id="cancelModalBtn">Cancel</button>
+            <button type="submit" class="btn btn-primary" id="submitRegistrationBtn">
+              <i class="fa-solid fa-ticket"></i>
+              <span>Confirm Registration</span>
+            </button>
+          </div>
+        </form>
+      </div>
+
+      <!-- Modal Step 2: Instant Confirmation Ticket -->
+      <div class="modal-step" id="modalStepSuccess" style="display: none;">
+        <div class="confirmation-container">
+          <div class="success-icon-badge">
+            <i class="fa-solid fa-check"></i>
+          </div>
+
+          <h3 class="success-title">You're Officially Registered!</h3>
+          <p class="success-subtitle">
+            Awesome! We've reserved your spot for this campus event. Here is your digital confirmation pass.
+          </p>
+
+          <!-- Digital Pass Ticket Card -->
+          <div class="digital-pass-card">
+            <div class="pass-header">
+              <div class="pass-brand">
+                <i class="fa-solid fa-graduation-cap"></i>
+                <span>NeighborhoodHub Pass</span>
+              </div>
+              <span class="pass-badge" id="ticketCategoryBadge">Hackathon</span>
+            </div>
+
+            <div class="pass-body">
+              <h4 class="pass-event-title" id="ticketEventTitle">HackNova 2026: 36-Hour Campus Hackathon</h4>
+              
+              <div class="pass-details-grid">
+                <div class="pass-detail">
+                  <span class="detail-label">ATTENDEE</span>
+                  <span class="detail-value" id="ticketAttendeeName">Alex Chen</span>
+                </div>
+                <div class="pass-detail">
+                  <span class="detail-label">STUDENT ID</span>
+                  <span class="detail-value" id="ticketStudentId">CS-2023-042</span>
+                </div>
+                <div class="pass-detail">
+                  <span class="detail-label">DATE & TIME</span>
+                  <span class="detail-value" id="ticketEventDate">Nov 14-16, 2026</span>
+                </div>
+                <div class="pass-detail">
+                  <span class="detail-label">LOCATION</span>
+                  <span class="detail-value" id="ticketEventVenue">Student Tech Center</span>
+                </div>
+              </div>
+
+              <div class="pass-footer">
+                <div class="pass-ref">
+                  <span class="ref-label">PASS CODE:</span>
+                  <span class="ref-code" id="ticketRefCode">FNH-98421</span>
+                </div>
+                <div class="pass-barcode" aria-hidden="true">
+                  <span>||| | | || ||| | ||| | ||</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="confirmation-actions">
+            <button type="button" class="btn btn-outline" id="printTicketBtn">
+              <i class="fa-solid fa-print"></i>
+              <span>Save / Print Pass</span>
+            </button>
+            <button type="button" class="btn btn-primary" id="doneModalBtn">
+              <i class="fa-solid fa-check-double"></i>
+              <span>Done</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Host Event Modal (Informative for Student Organizers) -->
+  <div class="modal-backdrop" id="hostEventModalBackdrop" aria-hidden="true">
+    <div class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="hostModalTitle">
+      <button type="button" class="modal-close-btn" id="closeHostModalBtn" aria-label="Close modal">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <div class="host-modal-inner">
+        <div class="modal-header">
+          <span class="modal-category-tag">Student Council & Clubs</span>
+          <h3 class="modal-title" id="hostModalTitle">Submit a Campus Event</h3>
+          <p class="modal-lead">
+            Want to list your club's upcoming competition, hackathon, or cultural night on Friendly Neighborhood Hub?
+          </p>
+        </div>
+        <div class="host-instructions">
+          <div class="instruction-step">
+            <div class="step-num">1</div>
+            <div>
+              <strong>Club Verification:</strong> Ensure your student organization is registered with the Student Activities Board.
+            </div>
+          </div>
+          <div class="instruction-step">
+            <div class="step-num">2</div>
+            <div>
+              <strong>Venue Booking:</strong> Confirm your campus room or amphitheatre reservation with the Facilities Office.
+            </div>
+          </div>
+          <div class="instruction-step">
+            <div class="step-num">3</div>
+            <div>
+              <strong>Direct Submission:</strong> Email your event banner, dates, and agenda to <code class="code-pill">events@campus-hub.edu</code> for same-day listing!
+            </div>
+          </div>
+        </div>
+        <div class="modal-actions" style="margin-top: 1.5rem;">
+          <button type="button" class="btn btn-primary btn-block" id="closeHostModalOkBtn">
+            <span>Got it, thank you!</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Global Toast Notification Banner -->
+  <div class="toast-container" id="toastContainer" aria-live="polite" aria-atomic="true"></div>
+
+  <!-- Main JavaScript File -->
+  <script src="script.js"></script>
+</body>
+</html>
